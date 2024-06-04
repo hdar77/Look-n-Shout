@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Look n Shout",
+  "version": "1.0",
+  "description": "look n shout to play web based 2D games",
+  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js" : ["./js/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["boundaries.html", "WebGazer/www/webgazer.js", "js/WebGazerWrapper.js"],
+    "matches": ["<all_urls>"]
+  }],
+  
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+

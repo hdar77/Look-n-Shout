@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look n Shout</title>
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="js/WebSpeech.js" lang="text/javascript" defer></script>
+    <!-- <script src="js/WebGazerWrapper.js" lang="text/javascript" defer></script> -->
+</head>
+<body>
+<div class="container">
+    <div class="toggle-container">
+        <label class="toggle-label">Play w/ eyes</label>
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch">
+            <span class="slider round"></span>
+        </label>
+        <label class="toggle-label">Play w/ voice</label>
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitchWebSpeech">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div>
+        <label for="upKey" class="labels" id="upkey">Look up:</label>
+        <input type="text" id="webspeech-input" placeholder="Press a key">
+    </div>
+    
+    <div>
+        <label for="downKey" id="downkey" class="labels webspeech-margin">Look down:</label>
+        <input type="text" id="downKey" placeholder="Press a key">
+    <div>
+        <label for="leftKey" class="labels" id="leftkey">Look left:</label>
+        <input type="text" id="leftKey" placeholder="Press a key">
+    </div>
+    <div>
+        <label for="rightKey" id="rightkey" class="labels">Look right:</label>
+        <input type="text" id="rightKey" placeholder="Press a key">
+    </div>
+
+    <div id="webspeech-maindiv">
+    <div id="dropdown-webspeech">
+        <div class = "">
+            <label for="upKey" class="labels" id="recorded-word">Your Word:</label>
+        </div>
+        <div class = "">
+            <label><select name="dog-names" id="dropdownmenu"> 
+                <option value="jump">jump</option> 
+                <option value="down">down</option> 
+                <option value="left">left</option> 
+                <option value="right">right</option> 
+            </select></label>
+        </div>
+    </div>
+    <button class="webspeech-buttons" id="record-button"><span class="webspeech-labels" id="testerclass">Start Recording</span></button>
+    </div>
+
+    <button id="cancelButton">Cancel</button>
+    <button id="saveButton">Save Settings</button>
+</div>
+</body>
+</html>
