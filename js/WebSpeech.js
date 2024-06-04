@@ -12,7 +12,6 @@ let recordedWord = document.getElementById("recorded-word");
 const speechRecognition =
   window.speechRecognition || window.webkitSpeechRecognition;
 let recognition;
-
 webspeechDropdown.style.display = "none";
 
 function startRecognition() {
