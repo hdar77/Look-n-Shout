@@ -33,7 +33,6 @@ const arrowUpTime = document.getElementById("arrowUpKeyTime");
 const arrowDownTime = document.getElementById("arrowDownKeyTime");
 const arrowLeftTime = document.getElementById("arrowLeftKeyTime");
 const arrowRightTime = document.getElementById("arrowRightKeyTime");
-let dropdownLabel = document.getElementById("dropdown-label");
 let isGridVisible;
 let voiceKeyBindsArr = [];
 let togglePauseResumeButton = true;
@@ -125,7 +124,6 @@ resetButton.addEventListener("click", function () {
  * @returns {boolean} Always returns false.
  */
 const checkAndResetVoice = (container) => {
-    console.log("TEST query1");
     let allEmpty = true;
 
     allEmpty = false;
@@ -140,7 +138,6 @@ const checkAndResetVoice = (container) => {
 };
 
 const checkAndResetEyes = (container) => {
-    console.log("TEST query1");
     let allEmpty = true;
 
     allEmpty = false;
@@ -159,7 +156,6 @@ const checkAndResetEyes = (container) => {
  */
 helpButton.addEventListener("click", function () {
     mainContainerPopup.classList.toggle("expanded");
-    console.log("TEST");
     if (!clicked) {
         clicked = true;
         helpPage.classList.remove("hidden");
@@ -226,7 +222,6 @@ const saveKeysVoice = (container) => {
     let inputArray = container.getElementsByClassName("keyword-input");
     let selectArray = container.getElementsByClassName("dropdown-select-voice");
 
-    //TODO 3 if statements weg, i anstatt zahl benutzen
     for (var i = 0; i < 4; i++) {
         if (
             (!inputArray[0].value == "" && selectArray[0].selectedIndex == 0) ||
@@ -449,14 +444,6 @@ function refreshKeys() {
  */
 document.addEventListener("DOMContentLoaded", restoreVoiceOptions);
 document.addEventListener("DOMContentLoaded", restoreEyeOptions);
-
-/* 
-document.addEventListener("DOMContentLoaded", getVoiceSelectValues);
-console.log(voiceKeyBindsArr);
-*/
-
-// input validation
-//TODO
 
 /**
  * Manages the visibility state of the webcam through UI buttons. On DOMContentLoaded, it initializes the visibility
