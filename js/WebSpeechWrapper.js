@@ -45,7 +45,6 @@ window.addEventListener("message", function (event) {
  * If "stop" is detected in the speech, the recognition process is halted.
  */
 function startRecognition() {
-    console.log("STARTED RECOGNITION");
     if ("webkitSpeechRecognition" in window) {
         recognition = new webkitSpeechRecognition();
     } else if ("SpeechRecognition" in window) {
@@ -61,9 +60,7 @@ function startRecognition() {
         if (finalTranscript.includes("stop")) {
             recognition.stop();
             event.results[0][0].transcript = "";
-            console.log("STOPPED");
         } else {
-            console.log("TEST METHOD");
             console.log(event);
 
             if (finalTranscript == keywordUp) {
@@ -77,11 +74,9 @@ function startRecognition() {
             }
 
             if (finalTranscript) {
-                console.log("Final Transcript TESTT: ", finalTranscript);
                 diagnostic.textContent = "Final Transcript TEST: " + finalTranscript;
             }
             startRecognition();
-            console.log("TEST");
         }
     };
 }
@@ -125,15 +120,6 @@ async function simulateKeyPress(key, timeKeyPress) {
         await new Promise((r) => setTimeout(r, timeKeyPress * 1000));
     }
     document.dispatchEvent(eventUp);
-}
-
-/**
- * Sleep function to pause the execution for a specified number of milliseconds.
- * @param milliseconds - time to sleep in milliseconds
- * @returns {Promise<unknown>} - promise to be resolved after the specified time
- */
-function sleep(milliseconds) {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
 /** Listener for messages from content.js for webcam on/off logic */

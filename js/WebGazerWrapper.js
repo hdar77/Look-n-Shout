@@ -107,7 +107,6 @@ window.addEventListener("message", function (event) {
         timeLeftEyes = event.data.dataArrayWebgazer.leftKeyTime;
         timeRightEyes = event.data.dataArrayWebgazer.rightKeyTime;
         timeDownEyes = event.data.dataArrayWebgazer.downKeyTime;
-
         console.log(timeDownEyes);
     }
 });

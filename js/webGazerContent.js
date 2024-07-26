@@ -1,10 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    alert(
-        "Please calibrate the gaze tracker for a few seconds by clicking into or hovering over the the grid fields." +
-        "You can turn off the grid in the extensions popup! Happy Gaming! :)"
-    );
-});
-
 /** function to load grid overlay initially for calibration
  * @param {boolean} isVisible - flag to set visibility of grid overlay
  */
