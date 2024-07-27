@@ -60,13 +60,11 @@ than cutting out information.
 
 ## Name
 
-Choose a self-explaining name for your project.
+Look 'n Shout - Chrome Plugin Extension for playing webbased games with your eyes or your voice
 
 ## Description
 
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be
-unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your
-project, this is a good place to list differentiating factors.
+"Look 'n Shout" is a Chrome Plugin which uses the webgazer.js library on the one hand for eyetracking, and the WebSpeech API for key word recognition and simulates key presses to let the user play webbased games with their eyes or voice.
 
 ## Badges
 
@@ -80,11 +78,8 @@ GIFs rather than actual videos). Tools like ttygif can help, but check out Ascii
 
 ## Installation
 
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew.
-However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing
-specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a
-specific context like a particular programming language version or operating system or has dependencies that have to be
-installed manually, also add a Requirements subsection.
+Just download the code and load it to unpacked here chrome://extensions/ 
+Note: Please enable the developer mode
 
 ## Usage
 
@@ -94,8 +89,7 @@ include in the README.
 
 ## Support
 
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address,
-etc.
+Please use the Github discussions forum for questions, improvement ideas etc.
 
 ## Roadmap
 
@@ -123,6 +117,5 @@ For open source projects, say how it is licensed.
 
 ## Project status
 
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has
-slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or
-owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+This is the first version of our plugin. So currently, there are restrictions that it only works for games where their html source is directly on the webpage without the usage of iFrames f.e.
+Also, the accuracy of eye gaze and voice tracking is not very accurate in some occasions.
